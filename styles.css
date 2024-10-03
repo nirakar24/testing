@@ -208,7 +208,7 @@ footer a {
 }
 
 .image-section img {
-    width: 20%; /* Control the size of the image */
+    width: 40%; /* Control the size of the image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: Rounded corners */
 }

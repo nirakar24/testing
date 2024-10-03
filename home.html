@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMYX+u7hlD3V+IZLmM7XkF04wi69/a2+vTe0G2" crossorigin="anonymous">
+    <title>Nirakar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add styles for loading message */
+        .loading {
+            display: none;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Nirakar Jena</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about" id="about-btn">About</a></li>
+                <li><a href="#projects" id="projects-btn">Projects</a></li>
+                <li><a href="#skills" id="skills-btn">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="show-info-btn" class="btn">Connect</button></li> <!-- Button in navbar -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero" style="display: none;"> <!-- Initially hidden -->
+            <div class="hero-content">
+                <div class="text-section">
+                    <h2>HI, IT'S NIRAKAR JENA</h2>
+                    <h1>Python Developer and AI Enthusiast.</h1>
+                </div>
+                <div class="image-section">
+                    <img src="IMG_8849.jpg" alt="Nirakar Jena" />
+                </div>
+            </div>
+        </section>
+        
+        <div id="main-content" style="display: none;"> <!-- Initially hidden -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Dedicated and motivated engineering student pursuing a Bachelor's degree in Artificial Intelligence and Data Science. Skilled in Python and Java programming languages, with hands-on experience in software development, image processing, and web technologies. Eager to leverage knowledge and passion for AI to contribute to innovative projects and further professional growth.</p>
+            </section>
+
+            <section id="projects">
+                <h2>My Projects</h2>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <img src="screenshot.png" alt="Project 1">
+                        <h3>Image Editor</h3>
+                        <p>Short description of the project. This project involves [brief overview of the project].</p>
+                        <a href="https://your-live-project1.com" target="_blank" class="btn">Live Demo</a>
+                        <a href="https://github.com/your-repo1" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+            
+                    <div class="project-card">
+                        <img src="best-free-movie-sites-1681323728136.jpg" alt="Project 2">
+                        <h3>Recommendation System</h3>
+                        <p>Short description of the project. This project focuses on [brief overview of the project].</p>
+                        <a href="https://your-live-project2.com" target="_blank" class="btn">Live Demo</a>
+                        <a href="https://github.com/your-repo2" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+            
+                    <div class="project-card">
+                        <img src="c0520791-655d-41eb-9104-0250a87495a9.webp" alt="Project 3">
+                        <h3>Streaming platform</h3>
+                        <p>Short description of the project. This project entails [brief overview of the project].</p>
+                        <a href="https://your-live-project3.com" target="_blank" class="btn">Live Demo</a>
+                        <a href="https://github.com/your-repo3" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+            
+                    <!-- Add more project cards as needed -->
+                </div>
+            </section>
+
+            <section id="skills">
+                <h3>Skills:</h3>
+                <ul class="skills-list">
+                    <li><i class="fab fa-js-square"></i> JavaScript</li>
+                    <li><i class="fab fa-react"></i> React</li>
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fab fa-java"></i> Java</li>
+                    <li><i class="fab fa-node-js"></i> Node.js</li>
+                    <li><i class="fab fa-html5"></i> HTML5</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                    <!-- Add more skills and icons as needed -->
+                </ul>
+                <a href="resume.pdf" download class="btn">Download My Resume</a>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <p>Or reach me on <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            </section>
+        </div>
+
+        <div id="loading" class="loading">Connecting to MetaMask...</div> <!-- Loading message -->
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Nirakar Jena. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Function to toggle hero and main content with loading effect
+        document.getElementById("show-info-btn").onclick = function() {
+            const heroSection = document.getElementById("hero");
+            const mainContent = document.getElementById("main-content");
+            const loadingMessage = document.getElementById("loading");
+
+            // Toggle visibility with loading effect
+            if (heroSection.style.display === "none") {
+                loadingMessage.style.display = "block"; // Show loading message
+
+                // Simulate loading time
+                setTimeout(function() {
+                    heroSection.style.display = "block"; // Show the hero section
+                    mainContent.style.display = "block"; // Show the main content
+                    loadingMessage.style.display = "none"; // Hide loading message
+                    document.getElementById("show-info-btn").textContent = "Disconnect"; // Change button text
+                }, 2000); // Change the duration as needed
+            } else {
+                heroSection.style.display = "none"; // Hide the hero section
+                mainContent.style.display = "none"; // Hide the main content
+                loadingMessage.style.display = "none"; // Hide loading message
+                document.getElementById("show-info-btn").textContent = "Connect"; // Change button text
+            }
+        };
+
+        // Smooth scrolling to sections
+        document.getElementById("about-btn").onclick = function() {
+            document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+        };
+
+        document.getElementById("projects-btn").onclick = function() {
+            document.getElementById("projects").scrollIntoView({ behavior: 'smooth' });
+        };
+
+        document.getElementById("skills-btn").onclick = function() {
+            document.getElementById("skills").scrollIntoView({ behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>

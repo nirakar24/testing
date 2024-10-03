@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+header {
+    background: #1f1f1f; /* Darker header */
+    color: #fff;
+    padding: 20px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #e0e0e0; /* Light link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #bb86fc; /* Accent color on hover */
+}
+
+main {
+    padding: 80px 20px 20px; /* Top padding for fixed header */
+}
+
+section {
+    margin: 40px 0;
+}
+
+h2 {
+    border-bottom: 2px solid #bb86fc; /* Underline for headings */
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: #2a2a2a; /* Card background */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(30% - 20px); /* Responsive sizing */
+    max-width: calc(30% - 20px);
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.project-card img {
+    width: 100%; /* Responsive image */
+    height: auto;
+    border-radius: 5px; /* Rounded corners for image */
+}
+
+.project-card h3 {
+    margin: 10px 0;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+}
+
+
+.btn {
+    display: inline-block;
+    background: #bb86fc; /* Button background */
+    color: #121212; /* Dark button text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: #3700b3; /* Darker button on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    background: #1f1f1f; /* Input background */
+    color: #e0e0e0; /* Input text color */
+    border: 1px solid #bb86fc; /* Input border */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: border 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #3700b3; /* Focus effect */
+    outline: none; /* Remove default outline */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f; /* Dark footer background */
+    color: #bbb; /* Light footer text */
+}
+
+footer a {
+    color: #bb86fc; /* Link color in footer */
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.skills-list li {
+    background: #2a2a2a; /* Background for skill items */
+    color: #e0e0e0; /* Text color */
+    margin: 5px 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; /* Center icons vertically */
+    transition: background 0.3s;
+}
+
+.skills-list li i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.5em; /* Icon size */
+}
+
+.skills-list li:hover {
+    background: #bb86fc; /* Background on hover */
+    color: #121212; /* Text color on hover */
+}
+#hero {
+    height: 30vh; /* Occupies 80% of the viewport height */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space between text and image */
+    background-color: #1e1e1e; /* Background color */
+    color: #ffffff; /* Text color */
+    padding: 20px; /* Padding for the section */
+}
+
+.hero-content {
+    display: flex;
+    width: 100%;
+}
+
+.text-section {
+    flex: 1; /* Takes up available space */
+}
+
+.text-section h1 {
+    font-size: 2.5em; /* Size of the main title */
+    margin: 0; /* Remove default margin */
+}
+
+.text-section h2 {
+    font-size: 1.5em; /* Size of the subtitle */
+    margin-top: 10px; /* Spacing between title and subtitle */
+}
+
+.image-section {
+    flex: 1; /* Takes up available space */
+    display: flex; /* Center image */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+.image-section img {
+    width: 20%; /* Control the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
